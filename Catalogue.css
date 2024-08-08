@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+.container{
+    height: 200vh;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.overlay{
+    position: absolute;
+    height: 200vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+
+.backdrop{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid blue;  */
+    background-image: url(./Background_bookstore.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.navbar{
+    height: 100px;
+    /* width: 100%; */
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+    padding: 10px 10px;
+}
+
+.ham{
+    color: #e3ae7e;
+    display: none;
+    position: absolute;
+    font-size: 30px;
+}
+
+.logo{
+    height: 90px;
+    width: 100px;
+    /* border: 1px solid blue; */
+    /* border-radius: 100%; */
+    background-image: url(./logo2new.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.clinks{
+    height: auto;
+    width: auto;
+    /* border: 1px solid green ; */
+    align-items: center;
+    display: flex;
+    
+}
+
+.clinks a{
+    text-decoration: none;
+    color: #eae8e6;
+    /* text-align: center; */
+    font-size: 15px;
+    display: block;
+    margin: 10px;
+}
+
+.Endbtns{
+    height: auto;
+    width: auto;
+    display: none;
+    /* border: 1px solid pink; */
+}
+
+.Endbtns > div a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #e3ae7e;
+}
+
+.navbar_links{
+    /* border: 2px solid white; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+     justify-content: space-between;
+}
+
+@media screen and (max-width: 1094px) {
+    .navbar_links{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:782px) {
+    .ham{
+        display: block;
+        right: 20px;
+        top: 33px;
+    }
+    .ham a{
+        color: white;
+    }
+    .navbar{
+        display: block;
+    }
+    .navbar_links{
+        display: none;
+        width: 100%;
+        padding: 100px 0px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* z-index: 1000 !important; */
+        min-height: auto;
+        background-color: #3c1e09;
+    }
+    .navbar_links.active{
+        display: flex;
+        flex-direction: column;
+    }
+    .Endbtns{
+        flex-direction: column;
+        align-items: center;
+    }
+    .clinks{
+        display: block;
+        text-align: center;
+    }
+    .Endbtns > div {
+        margin: 10px 0px !important;
+    }
+}
+
+.bookbox{
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+}
