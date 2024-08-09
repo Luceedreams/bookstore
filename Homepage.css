@@ -7,15 +7,14 @@
 }
 
 .container{
-    height: 810px;
+    min-height: 100vh;
     width: 100%;
     position: relative;
-    /* border: 1px solid red; */
 }
 
 .overlay{
     position: absolute;
-    height: 100vh;
+    min-height: 101.6vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.479);
 }
@@ -49,15 +48,14 @@
     font-size: 30px;
 }
 
-.logo{
-    height: 90px;
-    width: 100px;
+.logo img{
+    width: 70px;
     /* border: 1px solid blue; */
     /* border-radius: 100%; */
-    background-image: url(./logo2new.png);
+    /* background-image: url(./logo2new.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     
 }
 
@@ -74,7 +72,7 @@
     text-decoration: none;
     color: #eae8e6;
     /* text-align: center; */
-    font-size: 15px;
+    font-size: 15px !important;
     display: block;
     margin: 10px;
 }
@@ -89,7 +87,9 @@
 .Endbtns > div a{
     text-decoration: none;
     color: black;
-    padding: 5px 15px;
+    padding: 6px 18px;
+    font-weight: bold;
+    font-size: 14px;
     margin: 10px;
     border: none;
     cursor: pointer;
@@ -165,11 +165,12 @@
 .content h1{
     text-align: center;
     color: #eae8e6;
-    font-size: 50px;
+    font-size: 53px;
+    line-height: 64px;
 }
 
 .content > div{
-    max-width: 580px;
+    max-width: 680px;
     /* border: 1px solid white; */
 
 }
@@ -181,7 +182,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 10px;
+    padding-right: 2px;
 }
 
 .Barsrch input{
@@ -189,10 +190,13 @@
     width: 100%;
     border: none;
     background-color: transparent;
-    color: #eae8e6;
+    color: #fff;
     padding: 0px 10px;
     outline: none;
 
+}
+.Barsrch input::placeholder{
+    color: #b7b2b2;
 }
 
 .Barsrch button{
@@ -200,6 +204,7 @@
     background-color: #e3ae7e;
     border: none;
     padding: 6px 20px;
+    font-weight: bold;
     margin: 10px 10px;
     font-size: 16px;
     cursor: pointer;

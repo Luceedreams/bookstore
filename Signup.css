@@ -32,15 +32,9 @@
     padding: 20px;
 }
 
-.logoo{
-    height: 100px;
-    width: 100px;
-    /* border: 1px solid white; */
-    background-image: url(./logo2new.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
+.logo img{
+    width: 80px;
+    cursor: pointer;
 }
 
 .loginform{
@@ -100,6 +94,7 @@
     background-color: #b17945;
     margin-top: 50px;
     font-size: 16px;
+    cursor: pointer;
     font-weight: 600;
 }
 
@@ -108,7 +103,7 @@
 }
 
 .formproper h4{
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 10px;
     font-size: 14px; 
 }

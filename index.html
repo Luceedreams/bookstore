@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Marcellus&family=Open+Sans:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<style>
+    /* Book catalog section */
+    .book-catalog {
+        padding: 30px;
+        background-color: white;
+        /* Removed !important */
+    }
+    .book-catalog h2{
+        text-align: center;
+        font-size: 30px;
+        padding: 50px 0px;
+    }
+
+    /* Books container with grid layout */
+    .books {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns */
+        gap: 20px;
+        /* Space between books */
+    }
+
+    /* Individual book item */
+    .book {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        /* Add pointer cursor for clickable items */
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 1200px) {
+        .books {
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 columns on medium screens */
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .books {
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns on smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .books {
+            grid-template-columns: 1fr;
+            /* 1 column on mobile screens */
+        }
+    }
+
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<!-- ========================================  HTML STARTS =================   -->
+
+<body onload="loadDefaultBooks()">
+    <section class="container">
+        <div class="overlay"></div>
+        <div class="backdrop">
+            <nav class="navbar">
+                <div class="logo">
+                 <a href="./index.html">
+                    <img src="./logo2new.png" alt="">
+                 </a>
+                </div>
+                <div id="navLinks" class="navbar_links">
+                    <div class="clinks">
+                        <a href="./index.html">CATALOGUE</a>
+                        <a href="#">ABOUT US</a>
+                        <a href="#">CONTACTS</a>
+                    </div>
+                    <div class="Endbtns">
+                        <div><a href="./Login.html">LOGIN</a></div>
+                        <div><a href="./Signup.html">REGISTER</a></div>
+                    </div>
+                </div>
+                <div class="ham">
+                    <a href="javascript:void(0);" class="toggle-button" onclick="toggleNav()">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div>
+                    <h1>UNLOCK DREAM BOOKS WITH EVERY SEARCH</h1>
+                    <br>
+                </div>
+                <div class="Barsrch">
+                    <input type="text" id="searchInput" placeholder="Find Your Book Here">
+                    <button onclick="searchBooks()">SEARCH</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-catalog">
+        <h2>Explore Our Book Collection</h2>
+        <div id="books" class="books"></div>
+    </section>
+
+    <!-- Modal for Checkout -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+            <button style="background-color: #b17945; outline: none; padding: 9px 13px; border: none; margin-top: 10px;">Checkout</button>
+        </div>
+    </div>
+
+    <script src="./Homepage.js"></script>
+</body>
+
+</html>
