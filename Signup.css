@@ -107,3 +107,49 @@
     margin-top: 10px;
     font-size: 14px; 
 }
+
+@media screen and (max-width:800px) {
+    .formproper {
+        width: 60%;
+
+    }
+
+    .formproper button {
+        width: 100%;
+    }
+
+    #email{
+        width: 100%;
+    }
+
+    #pswrd {
+        width: 100%;
+
+    }
+
+    #Usr {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .decor {
+        display: none;
+    }
+
+    .loginform {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .over {
+        display: none;
+    }
+
+    .formproper {
+        width: 70%;
+    }
+
+}

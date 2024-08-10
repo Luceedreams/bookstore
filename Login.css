@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 
 }
 
-.box{
+.box {
     height: 100vh;
     width: 100%;
     /* border: 1px solid red; */
@@ -15,14 +15,14 @@
 
 }
 
-.over{
+.over {
     height: 100%;
     width: 30%;
     background-color: rgba(0, 0, 0, 0.255);
     position: absolute;
 }
 
-.decor{
+.decor {
     height: 100%;
     width: 30%;
     /* border: 1px solid purple; */
@@ -33,12 +33,12 @@
     padding: 20px;
 }
 
-.logo img{
+.logo img {
     width: 80px;
     cursor: pointer;
 }
 
-.loginform{
+.loginform {
     height: 100%;
     width: 70%;
     /* border: 1px solid blue; */
@@ -47,7 +47,7 @@
     justify-content: center;
 }
 
-.formproper{
+.formproper {
     height: 50%;
     width: 50%;
     /* border: 1px solid brown; */
@@ -55,11 +55,11 @@
     flex-direction: column;
 }
 
-.formproper h1{
+.formproper h1 {
     font-weight: 600;
 }
 
-#Usr{
+#Usr {
     height: 50px;
     width: 79%;
     border: 1px solid #e7e7e9;
@@ -68,7 +68,7 @@
     margin-top: 50px;
 }
 
-#pswrd{
+#pswrd {
     height: 50px;
     width: 79%;
     border: 1px solid #e7e7e9;
@@ -78,7 +78,7 @@
 
 }
 
-.formproper button{
+.formproper button {
     width: 79%;
     height: 50px;
     border-radius: 50px;
@@ -90,12 +90,55 @@
     cursor: pointer;
 }
 
-.formproper button:hover{
+.formproper button:hover {
     background-color: #e3ae7e;
 }
 
-.formproper h4{
+.formproper h4 {
     font-weight: 500;
     margin-top: 10px;
-    font-size: 14px; 
+    font-size: 14px;
+}
+
+@media screen and (max-width:720px) {
+    .formproper {
+        width: 60%;
+
+    }
+
+    .formproper button {
+        width: 100%;
+    }
+
+    #pswrd {
+        width: 100%;
+
+    }
+
+    #Usr {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .decor {
+        display: none;
+    }
+
+    .loginform {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .over {
+        display: none;
+    }
+
+    .formproper {
+        width: 70%;
+    }
+
+
 }
